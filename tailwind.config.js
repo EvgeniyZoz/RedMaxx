@@ -14,7 +14,12 @@ module.exports = {
         
       },
       colors:{ 
-        
+        'primary':'#161616',
+        'primary2':'#242240',
+        'secondary':'#D00000',
+        'accent':'#FFD166', //orange
+        'accent2':'#F5F2E8', //sand
+        'accent3':'#D9D9D9',
       },
       inset:{
         '9999':'9999px'
