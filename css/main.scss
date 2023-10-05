@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.woff') format('woff'),
+       url('../fonts/Roboto-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Medium.woff') format('woff'),
+       url('../fonts/Roboto-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Bold.woff') format('woff'),
+       url('../fonts/Roboto-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/*@font-face { 
+  font-family: Montserrat;
+  src: url('../fonts/Montserrat-Medium.woff') format('woff'),
+       url('../fonts/Montserrat-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Montserrat;
+  src: url('../fonts/Montserrat-ExtraBold.woff') format('woff'),
+       url('../fonts/Montserrat-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Myriad Pro;
+  src: url('../fonts/MyriadPro-Regular.woff') format('woff'),
+       url('../fonts/MyriadPro-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Myriad Pro;
+  src: url('../fonts/MyriadPro-Bold.woff') format('woff'),
+       url('../fonts/MyriadPro-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}*/
+html, body{
+  font-family: 'Roboto', Arial;
+  min-height:100%;
+  color:#2b2b2b;
+  font-size: 16px;
+}
+*{
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+}
+
+@media screen and (min-width:768px){
+  
+}
+
