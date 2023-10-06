@@ -31,6 +31,7 @@ html, body{
   min-height:100%;
   color:#161616;
   font-size: 16px;
+  line-height: 1.5;
 }
 *{
   box-sizing: border-box;
@@ -54,8 +55,9 @@ html, body{
   padding:10px;
   display: inline-block;
   margin-right: -10px;
-  width: 45px;
+  width: 40px;
   height: 40px;
+  border-radius: 5px;
   
   span{
     margin:8px auto;
@@ -79,7 +81,7 @@ html, body{
   z-index: -1;
 }
 .header-menu-wrapper{
-  @apply py-20 text-center text-xl sm:py-0 sm:flex flex-grow items-center w-72 fixed sm:static -right-72 top-0 overflow-auto bottom-0;
+  @apply py-20 text-center text-xl sm:py-0 sm:flex flex-grow items-center w-72 fixed sm:static -right-72 top-0  bottom-0;
 }
 .header{
   background: #FFF;
@@ -88,18 +90,48 @@ html, body{
   right:0;
   top:0;
   z-index: 100;
+  height: 96px;
 }
 .menuActive {
+  overflow: hidden;
+  position: relative;
+  
+  .main__menu_a:hover .main__menu_arrow{
+    rotate: 0deg;
+  }
+
+  .header{
+    margin-top: -96px;
+  }
+
   .site-overlay{
     display: block;
     opacity: 0.6;
     z-index: 900;
   }
-  .header{}
+  .header{
+    position: static;
+  }
+  .main__menu_sub{
+    position: static;
+    left:0;
+    top:100%;
+    display: block;
+    @apply my-5 bg-accent2;
+  }
+  .main__menu_sub_a{
+    padding:10px 0
+  }
   .header-menu-wrapper{
+    padding-top: 0;
+    overflow: auto;
     right:0;
     z-index: 1000;
     background: #FFF;
+    @apply bg-accent;
+  }
+  .main__menu_li{
+    margin:20px 0;
   }
   .menu-btn{
     z-index: 1000;
@@ -154,9 +186,7 @@ html, body{
   border-radius: 65px;
 }
 .main__img_caption{
-  @apply bg-white p-4 rounded-2.5xl text-xs sm:text-sm absolute right-0 bottom-0 z-30 text-primary3 text-left;
-  right:-9%;
-  bottom:10%;
+  @apply bg-white -right-6 p-4 rounded-2.5xl text-xs xxs:text-sm absolute -bottom-6 xxs:bottom-1 z-30 text-primary3 text-left;
 
   img{
     width: 66px;
@@ -177,7 +207,7 @@ html, body{
   }
 }
 .btn{
-  @apply sm:text-xl leading-6 font-medium bg-secondary text-white px-10 py-4 sm:py-5 inline-block;
+  @apply sm:text-xl leading-6 font-medium bg-secondary text-white px-10 py-4 sm:py-5 inline-block hover:bg-accent hover:text-primary active:bg-primary active:text-white;
 }
 .main__nav_wrap{
   @apply relative sticky top-0;
@@ -219,9 +249,25 @@ html, body{
 .main__menu_a{
   display: block;
   padding:4px 0;
+  &:hover{
+    .main__menu_arrow{
+      rotate: 180deg
+    }
+  }
+}
+.main__menu_arrow{
+  @apply ml-2 shrink-0 cursor-pointer;
+}
+.main__menu_a--sub{
+  @apply flex items-center justify-center;
 }
 .main__menu_sub_a{
   white-space: nowrap;
+  padding:4px 30px;
+  display: block;
+  &:hover{
+    @apply bg-secondary text-white
+  }
 }
 .main__menu_li:hover .main__menu_sub{
   display: block;
@@ -231,13 +277,19 @@ html, body{
   left:0;
   top:100%;
   display: none;
+  @apply bg-accent;
+  padding:10px 0
+}
+.main__block{
+  @apply bg-accent2 overflow-hidden sm:flex justify-center flex-col;
+  min-height: calc(100vh - 96px);
 }
 .header_login{
-  
+  @apply bg-secondary sm:bg-white block border-b mb-5 py-8 sm:py-1 text-white sm:text-primary sm:border-b-0  sm:mb-0 font-medium;
 }
 /*------animation--------*/
 .header-menu-wrapper, .site-overlay, a, button, input, textarea,
-.menu-btn:after, .menu-btn:before{
+.menu-btn:after, .menu-btn:before, .main__menu_arrow{
   transition: all 0.3s;
 }
 /*------media-------*/
