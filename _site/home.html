@@ -9,23 +9,93 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Index</title>
 
-<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="css/styles.css">
 <!-- End Links -->
 <!-- ======================================== -->
 </head>
 
 <body>
-	<header>
-      <img src="img/logo.svg" width="107" height="48"  alt="">
-      About Us
-Student Stories
-Careers
-Contact
-
-      Login
-
-   </header>
-
+	<header><div class="container py-5 flex justify-between">
+      <div class="shrink-0">
+         <img src="img/logo.svg" width="107" height="48"  alt="">
+      </div>
+      <div class="header-menu-wrapper sm:block w-72 fixed -left-72 top-0 overflow-auto bottom-0 bg-slate-600">
+         <nav>
+            <ul>
+               <li><a href="#">Courses</a>
+                  <ul>
+                     <li><a href="#">Courses 1</a></li>
+                     <li><a href="#">Courses 2</a></li>
+                     <li><a href="#">Courses 3</a></li>
+                     <li><a href="#">Courses 4</a></li>
+                  </ul>
+               </li>
+               <li><a href="#">About Us</a></li>
+               <li><a href="#">Student Stories</a></li>
+               <li><a href="#">Careers</a></li>
+               <li><a href="#">Contact</a></li>
+            </ul>
+         </nav>
+         <a href="#" class="">Login</a>
+      </div>
+      <div class="menu-btn sm:hidden"><span></span></div>
+   </div></header>
+   <section class="bg-accent2 overflow-hidden">
+      <div class="container sm:flex items-center justify-between pt-20 pb-11 sm:pt-20 sm:pb-20">
+         <div class="text-center pl-8 pr-12 sm:pl-0 md:ml-20 shrink-0 order-2">
+            <div class="main__img_wrap">
+               <img src="img/main_img.jpg" width="423" height="423" alt="" class="main__img_img">
+               <div class="main__img_caption">
+                  <div class="text-xs sm:text-base font-bold">Kate Flilya</div>
+                  <span class="font-bold">RedUX graduate</span> <br>
+                  <div class="text-primary5 mt-1">
+                     <div><span class="text-bold">from</span> Recruiter <br>
+                     <span class="text-bold">to</span> UX designer at Danone</div>
+                  </div>
+                  <div class="mt-4"><img src="img/danone.png" width="86" alt="" class="block"></div>
+               </div>
+            </div>
+         </div>
+         <div class="flex-grow mt-10 sm:mr-20 order-1 text-left">
+            <div class="text-base text-primary2 sm:mb-2.5 sm:text-xl">Online | 6 Months</div>
+            <h1 class="text-3.5xl sm:text-4.5xl leading-tight">We transform novices into <span class="bg-accent font-medium whitespace-nowrap">mid-weight</span> product/UX designers</h1>
+            <p class="sm:text-xl mt-5">IT is booming worldwide, encompassing coding, data analysis, and digital design. UX designers play a pivotal role in crafting user-friendly digital products. Join us in shaping this transformative journey.</p>
+            <ul class="sm:flex sm:gap-10 mt-6 sm:mt-8">
+               <li class="ul_li_checked mb-1.5 sm:mb-0">Flexible payment options</li>
+               <li class="ul_li_checked mb-1.5 sm:mb-0">Autonomous or with a mentor</li>
+            </ul>
+            <a href="#" class="btn mt-4 sm:mt-8">Apply Now</a>
+         </div>
+      </div>
+   </section>
+   <section class="container">
+      <div class="relative">
+         <div class="main__nav_wrap">
+            <nav class="main__nav">
+               <ul class="flex">
+                  <li class="main__nav_li active"><a href="#" class="main__nav_a">Introduction</a></li>
+                  <li class="main__nav_li"><a href="#" class="main__nav_a">How it works</a></li>
+                  <li class="main__nav_li"><a href="#" class="main__nav_a">Mentorship</a></li>
+                  <li class="main__nav_li"><a href="#" class="main__nav_a">Skills you will gain</a></li>
+                  <li class="main__nav_li"><a href="#" class="main__nav_a">Curriculum</a></li>
+                  <li class="main__nav_li"><a href="#" class="main__nav_a">Apply now</a></li>
+               </ul>
+            </nav>
+         </div>
+         <div class="my-10">
+            Transition from entry-level, and gain the expertise needed to excel as a mid-weight designer. Join us to unlock new opportunities in the world of design.
+         </div>
+         <div>
+            <div>Gain job ready skills <br>in just 6 months</div>
+            <ul>
+               <li class="ul_li">Elevate your proficiency beyond junior status to an intermediate level</li>
+               <li class="ul_li">Benefit from intensified mentorship and instructor guidance for enhanced support</li>
+               <li class="ul_li">Seamlessly integrate the course into your work or studies</li>
+            </ul>
+         </div>
+         <div style="height: 1000px;"></div>
+      </div>
+   </section>
    <script src="js/script.js"></script>
 </body>
 </html>
