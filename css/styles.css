@@ -53,25 +53,8 @@ html, body {
   padding: 10px;
   display: inline-block;
   margin-right: -10px;
-}
-.menu-btn.btnActive {
-  left: 270px;
-  top: 0;
-  color: #FFF;
-  position: fixed;
-  width: 53px;
-  height: 51px;
-  box-sizing: border-box;
-  text-align: center;
-  padding: 0;
-}
-.menu-btn.btnActive:before {
-  content: "";
-  line-height: 54px;
-  font-size: 24px;
-}
-.menu-btn.btnActive span {
-  display: none;
+  width: 45px;
+  height: 40px;
 }
 .menu-btn span {
   margin: 8px auto;
@@ -85,19 +68,55 @@ html, body {
 }
 
 .site-overlay {
-  opacity: 0.6;
+  opacity: 0;
   background: #000;
   position: fixed;
   left: 0;
   top: 0;
   bottom: 0;
   right: 0;
+  z-index: -1;
+}
+
+.header-menu-wrapper {
+  @apply py-20 text-center text-xl sm:py-0 sm:flex flex-grow items-center w-72 fixed sm:static -right-72 top-0 overflow-auto bottom-0;
+}
+
+.header {
+  background: #FFF;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
   z-index: 100;
 }
 
+.menuActive .site-overlay {
+  display: block;
+  opacity: 0.6;
+  z-index: 900;
+}
 .menuActive .header-menu-wrapper {
-  left: 0;
+  right: 0;
   z-index: 1000;
+  background: #FFF;
+}
+.menuActive .menu-btn {
+  z-index: 1000;
+}
+.menuActive .menu-btn:before, .menuActive .menu-btn:after {
+  position: absolute;
+  margin: auto;
+  inset: -9999px;
+}
+.menuActive .menu-btn:before {
+  transform: rotate(45deg);
+}
+.menuActive .menu-btn:after {
+  transform: rotate(-45deg);
+}
+.menuActive .menu-btn span {
+  display: none;
 }
 
 .main__img_wrap {
@@ -199,12 +218,60 @@ html, body {
   @apply block px-5 py-2.5 leading-5;
 }
 
+.main__menu_ul {
+  @apply sm:flex sm:items-center;
+}
+
+.main__menu_li {
+  position: relative;
+  margin: 10px 20px;
+}
+
+.main__menu_a {
+  display: block;
+  padding: 4px 0;
+}
+
+.main__menu_sub_a {
+  white-space: nowrap;
+}
+
+.main__menu_li:hover .main__menu_sub {
+  display: block;
+}
+
+.main__menu_sub {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  display: none;
+}
+
+/*------animation--------*/
+.header-menu-wrapper, .site-overlay, a, button, input, textarea,
+.menu-btn:after, .menu-btn:before {
+  transition: all 0.3s;
+}
+
+/*------media-------*/
 @media screen and (min-width: 992px) {
+  .main__menu_li {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
   .main__img_img, .main__img_wrap:before, .main__img_wrap:after {
     border-radius: 100px;
   }
   .main__img_caption img {
     width: 86px;
+  }
+  .main__img_img {
+    width: 360px;
+  }
+}
+@media screen and (min-width: 1320px) {
+  .main__img_img {
+    width: 423px;
   }
 }
 
