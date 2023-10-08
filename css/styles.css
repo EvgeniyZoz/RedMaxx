@@ -3,6 +3,13 @@
 @tailwind utilities;
 @font-face {
   font-family: "Roboto";
+  src: url("../fonts/Roboto-Light.woff") format("woff"), url("../fonts/Roboto-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
   src: url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -98,8 +105,15 @@ html, body {
   overflow: hidden;
   position: relative;
 }
-.menuActive .main__menu_a:hover .main__menu_arrow {
-  rotate: 0deg;
+.menuActive .main__menu_a:hover .main__menu_arrow,
+.menuActive .main__menu_a .main__menu_arrow {
+  rotate: 180deg;
+}
+.menuActive .header_login:hover {
+  @apply text-white bg-primary;
+}
+.menuActive .header_login:hover .main__menu_span {
+  border-color: transparent;
 }
 .menuActive .header {
   margin-top: -96px;
@@ -208,6 +222,31 @@ html, body {
   left: 0;
   top: 4px;
 }
+.ul_li{
+  padding-left: 24px;
+  min-width: 100%;
+  display: inline-block;
+}
+.ul_li:last-child {
+  margin-bottom: 0;
+}
+.ul_li:before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  margin-left: -14px;
+  border-radius: 100px;
+  left: 0;
+  top: 10px;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  @apply bg-primary;
+}
+
+.ul_li--white:before {
+  background: #FFF;
+}
 
 .btn {
   @apply sm:text-xl leading-6 font-medium bg-secondary text-white px-10 py-4 sm:py-5 inline-block hover:bg-accent hover:text-primary active:bg-primary active:text-white;
@@ -244,6 +283,13 @@ html, body {
   @apply bg-accent2 rounded-3xl;
 }
 
+.main__nav_a span {
+  @apply border-b-2 border-transparent;
+}
+.main__nav_a span:hover {
+  @apply border-accent;
+}
+
 .main__nav_a {
   @apply block px-5 py-2.5 leading-5;
 }
@@ -256,10 +302,22 @@ html, body {
   position: relative;
   margin: 10px 20px;
 }
+.main__menu_li:hover .main__menu_arrow {
+  rotate: 180deg;
+}
 
 .main__menu_a {
   display: block;
   padding: 4px 0;
+}
+.main__menu_a .main__menu_span {
+  @apply border-b-2 border-transparent;
+}
+.main__menu_a:hover {
+  @apply text-secondary;
+}
+.main__menu_a:hover .main__menu_span {
+  @apply border-secondary;
 }
 .main__menu_a:hover .main__menu_arrow {
   rotate: 180deg;

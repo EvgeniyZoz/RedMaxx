@@ -8,11 +8,15 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: { 
-        
+         
       },
       fontSize:{
+        '2.5xl':'28px',
         '3.5xl':'32px',
         '4.5xl':'42px'
+      },
+      borderWidth:{
+        '3':'3px'
       },
       borderRadius:{
         '2.5xl':'20px'

@@ -4,6 +4,14 @@
 
 @font-face {
   font-family: 'Roboto';
+  src: url('../fonts/Roboto-Light.woff') format('woff'),
+       url('../fonts/Roboto-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto';
   src: url('../fonts/Roboto-Regular.woff') format('woff'),
        url('../fonts/Roboto-Regular.woff2') format('woff2');
   font-weight: 400;
@@ -96,10 +104,19 @@ html, body{
   overflow: hidden;
   position: relative;
   
-  .main__menu_a:hover .main__menu_arrow{
-    rotate: 0deg;
-  }
+  .main__menu_a:hover .main__menu_arrow,
+  .main__menu_a .main__menu_arrow{
+    rotate: 180deg;
+  } 
 
+  .header_login{
+    &:hover{
+      @apply text-white bg-primary;
+      .main__menu_span{
+        border-color:transparent 
+      }
+    }
+  }
   .header{
     margin-top: -96px;
   }
@@ -206,6 +223,28 @@ html, body{
     top:4px
   }
 }
+.ul_li{
+  padding-left: 14px;
+  position: relative;
+  &:last-child{
+    margin-bottom: 0;
+  }
+  &:before{
+    content:'';
+    width: 4px;
+    height: 4px;
+    border-radius: 100px;
+    position: absolute;
+    left:0;
+    top:10px;
+    @apply bg-primary;
+  }
+}
+.ul_li--white{
+  &:before{
+    background: #FFF;
+  }
+}
 .btn{
   @apply sm:text-xl leading-6 font-medium bg-secondary text-white px-10 py-4 sm:py-5 inline-block hover:bg-accent hover:text-primary active:bg-primary active:text-white;
 }
@@ -236,6 +275,12 @@ html, body{
 .main__nav_li.active .main__nav_a{
   @apply bg-accent2 rounded-3xl;
 }
+.main__nav_a span{
+  @apply border-b-2 border-transparent;
+  &:hover{
+    @apply border-accent;
+  }
+}
 .main__nav_a{
   @apply block px-5 py-2.5 leading-5;
 }
@@ -245,11 +290,23 @@ html, body{
 .main__menu_li{
   position: relative;
   margin:10px 20px;
+  &:hover{
+    .main__menu_arrow{
+      rotate: 180deg
+    }
+  }
 }
 .main__menu_a{
   display: block;
   padding:4px 0;
+  .main__menu_span{
+    @apply border-b-2 border-transparent
+  }
   &:hover{
+    @apply text-secondary;
+    .main__menu_span{
+      @apply border-secondary
+    }
     .main__menu_arrow{
       rotate: 180deg
     }
