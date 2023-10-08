@@ -11,6 +11,7 @@ module.exports = {
          
       },
       fontSize:{
+        'inherit':['16px', '1.5'],
         '2.5xl':'28px',
         '3.5xl':'32px',
         '4.5xl':'42px'

@@ -222,25 +222,26 @@ html, body {
   left: 0;
   top: 4px;
 }
-.ul_li{
-  padding-left: 24px;
-  min-width: 100%;
+
+.ul_li {
+  padding-left: 14px;
   display: inline-block;
+  vertical-align: middle;
+  min-width: 100%;
 }
 .ul_li:last-child {
   margin-bottom: 0;
 }
 .ul_li:before {
+  display: inline-block;
+  vertical-align: middle;
   content: "";
   width: 4px;
   height: 4px;
+  margin-right: 10px;
   margin-left: -14px;
   border-radius: 100px;
-  left: 0;
-  top: 10px;
-  margin-right: 10px;
-  display: inline-block;
-  vertical-align: middle;
+  margin-left: -5px;
   @apply bg-primary;
 }
 

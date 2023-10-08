@@ -225,18 +225,23 @@ html, body{
 }
 .ul_li{
   padding-left: 14px;
-  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 100%;
+  
   &:last-child{
     margin-bottom: 0;
   }
   &:before{
+    display: inline-block;
+    vertical-align: middle;
     content:'';
     width: 4px;
     height: 4px;
+    margin-right: 10px;
+    margin-left: -14px;
     border-radius: 100px;
-    position: absolute;
-    left:0;
-    top:10px;
+    margin-left: -5px;
     @apply bg-primary;
   }
 }
