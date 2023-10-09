@@ -16,6 +16,9 @@ module.exports = {
         '3.5xl':'32px',
         '4.5xl':'42px'
       },
+      boxShadow:{
+        'img': '0px 4px 4px rgba(0, 0, 0, 0.25)'
+      },
       borderWidth:{
         '3':'3px'
       },

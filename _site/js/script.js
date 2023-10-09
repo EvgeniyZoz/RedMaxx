@@ -30,3 +30,4 @@ body.addEventListener('click', function(event){
 window.addEventListener('resize', function() {
     document.body.classList.remove('menuActive');
 });
+
