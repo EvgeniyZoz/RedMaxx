@@ -101,6 +101,14 @@ html, body {
   height: 96px;
 }
 
+.form-control {
+  width: 100%;
+  border: 1px solid #161616;
+  padding: 14px 10px;
+  line-height: 20px;
+  font-family: "Roboto";
+}
+
 .menuActive {
   overflow: hidden;
   position: relative;
@@ -304,6 +312,10 @@ html, body {
   @apply border-accent;
 }
 
+.main__nav_li.active .main__nav_a span {
+  border-color: transparent;
+}
+
 .main__nav_a {
   @apply block px-5 py-2.5 leading-5;
 }
@@ -446,6 +458,10 @@ html, body {
   z-index: 30;
 }
 
+.accordion-item.show .accordion-button {
+  @apply bg-accent2;
+}
+
 .accordion-item .accordion-collapse {
   transition: max-height 0.3s ease-in-out;
 }
@@ -458,6 +474,39 @@ html, body {
   margin-bottom: -1px;
   overflow: hidden;
   @apply border-t border-b border-primary2/10 flex flex-col justify-center items-start;
+}
+
+.footer__nav {
+  @apply xxs:columns-2 gap-8;
+}
+
+.footer__nav_li {
+  @apply break-inside-avoid py-3 sm:py-5;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: -1px;
+  line-height: 1.6;
+}
+
+.social_a {
+  @apply block relative w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-white;
+}
+
+.enrol__block {
+  @apply xs:grid sm:flex grid-cols-2 xs:gap-8 justify-between pt-11 pb-11 sm:pt-20 sm:pb-20;
+  border-bottom: 1px solid #C6C1C9;
+  border-top: 1px solid #C6C1C9;
+}
+
+.enrol__block_left {
+  width: 100%;
+  max-width: 550px;
+}
+
+.enrol__block_right {
+  width: 100%;
+  max-width: 405px;
+  flex-shrink: 0;
 }
 
 /*------animation--------*/

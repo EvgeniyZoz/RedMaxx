@@ -84,12 +84,12 @@
       <div class="main__nav_wrap">
          <nav class="main__nav scrollable">
             <ul class="flex">
-               <li class="main__nav_li active"><a href="#" class="main__nav_a">Introduction</a></li>
-               <li class="main__nav_li"><a href="#" class="main__nav_a"><span>How it works</span></a></li>
-               <li class="main__nav_li"><a href="#" class="main__nav_a"><span>Mentorship</span></a></li>
-               <li class="main__nav_li"><a href="#" class="main__nav_a"><span>Skills you will gain</span></a></li>
-               <li class="main__nav_li"><a href="#" class="main__nav_a"><span>Curriculum</span></a></li>
-               <li class="main__nav_li"><a href="#" class="main__nav_a"><span>Apply now</span></a></li>
+               <li class="main__nav_li active"><a href="#main__nav1" class="main__nav_a">Introduction</a></li>
+               <li class="main__nav_li"><a href="#main__nav2" class="main__nav_a"><span>How it works</span></a></li>
+               <li class="main__nav_li"><a href="#main__nav3" class="main__nav_a"><span>Mentorship</span></a></li>
+               <li class="main__nav_li"><a href="#main__nav4" class="main__nav_a"><span>Skills you will gain</span></a></li>
+               <li class="main__nav_li"><a href="#main__nav5" class="main__nav_a"><span>Curriculum</span></a></li>
+               <li class="main__nav_li"><a href="#main__nav6" class="main__nav_a"><span>Apply now</span></a></li>
             </ul>
          </nav>
       </div>
@@ -106,7 +106,7 @@
             <li class="ul_li ul_li--white mb-4">Seamlessly integrate the course into your work or studies</li>
          </ul>
       </div>    
-      <div class="text-primary4">Introduction</div>
+      <div class="text-primary4 mainNav" id="main__nav1">Introduction</div>
       <h2 class="text-3.5xl sm:text-4.5xl sm:leading-snug font-medium mb-10 sm:mb-14">Who can benefit from this bootcamp?</h2>
       <ul class="sm:text-xl xs:grid grid-cols-2 gap-x-12">
          <li class="mb-8 sm:mb-10">
@@ -127,7 +127,7 @@
          </li>
       </ul>
       <hr class="border-b border-accent3 my-10">
-      <div class="text-primary4">How it works</div>
+      <div class="text-primary4 mainNav" id="main__nav2">How it works</div>
       <div class="xs:grid grid-cols-2 gap-x-12 xs:mb-6">
          <div>
             <h3 class="text-2xl sm:text-2.5xl leading-normal font-medium mb-4 sm:mb-5">Proven method for achieving student excellence: our approach in action</h3>
@@ -168,7 +168,7 @@
             </ul>
          </div>
       </div>
-      <div class="py-5 xs:py-7 sm:py-9 px-5 xs:px-10 sm:px-20 border border-t-3 border-accent mb-10 sm:mb-20">
+      <div class="py-5 xs:py-7 sm:py-9 px-5 xs:px-10 sm:px-20 border border-t-3 border-accent mb-10 sm:mb-20 mainNav" id="main__nav3">
          <div class="font-medium mb-9 sm:text-xl">Meet our mentors and career coaches from leading <br class="hidden xs:block">IT agencies and large-cap companies:</div>
          <ul class="xs:grid grid-cols-2 gap-x-12 text-sm leading-normal sm:text-base border-b border-accent3 mb-10 sm:mb-14 sm:pb-8">
             <li class="flex mb-10 xs:mb-8">
@@ -245,7 +245,7 @@
             </li>
          </ul>
       </div>
-      <div class="text-primary4">Skills you will gain</div>
+      <div class="text-primary4 mainNav" id="main__nav4">Skills you will gain</div>
       <h2 class="text-3.5xl sm:text-4.5xl sm:leading-snug font-medium mb-10 sm:mb-12">Job-ready skills employers seek</h2>
       <ul class="sm:text-xl xs:grid grid-cols-2 gap-x-12">
          <li class="mb-8 sm:mb-10">
@@ -339,7 +339,7 @@
          </li>
       </ul>
       <hr class="border-b border-accent3 my-10">
-      <div class="xs:grid grid-cols-2 gap-x-14 mb-10 xs:mb-20">
+      <div class="xs:grid grid-cols-2 gap-x-14 mb-10 xs:mb-20 mainNav" id="main__nav5">
          <div>
             <div class="text-primary4">Curriculum</div>
             <h2 class="text-3.5xl sm:text-4.5xl sm:leading-snug font-medium mb-4 sm:mb-7">Design Excellence Unleashed: What You'll Learn in our Ui/UX Bootcamp</h2>
@@ -448,7 +448,7 @@
          </div>
       </div>
       <hr class="border-b border-accent3 my-10 sm:my-20">
-      <div class="text-primary4">Apply Now</div>
+      <div class="text-primary4 mainNav" id="main__nav6">Apply Now</div>
       <h2 class="text-3.5xl sm:text-4.5xl sm:leading-snug font-medium mb-10 sm:mb-12">One course with two different prices</h2>
       <div class="xs:flex gap-x-8 tarif__block">
          <!--tarif_left-->
@@ -695,32 +695,36 @@
       </div>
    </div><!--end container-->
 
-   <footer class="bg-primary text-white"><div class="container pt-5 pb-12">
-      
-      <div class="xs:flex mb-7">
-         <div><a href="mailto:Hello@reduxbootcamp.com">Hello@reduxbootcamp.com</a></div>
-         <div><a href="tel:+447361442688">+44 7361 4426 88</a></div>
+   <footer class="bg-primary text-white sm:text-xl sm:leading-normal">
+      <div class="container pt-5 pb-12 xs:pb-0 xs:grid xs:grid-cols-3 xs:gap-x-8">
+         <div class="xs:col-span-2">
+            <div class="xs:flex mb-7 xs:gap-9">
+               <div><a href="mailto:Hello@reduxbootcamp.com">Hello@reduxbootcamp.com</a></div>
+               <div><a href="tel:+447361442688">+44 7361 4426 88</a></div>
+            </div>
+            <ul class="footer__nav mb-12">
+               <li class="footer__nav_li"><a href="#">About Us</a></li>
+               <li class="footer__nav_li"><a href="#">Courses</a>
+                  <div class="opacity-50 text-sm sm:text-base">Product Design <br>
+                  <a href="#" class="hover:underline">UI Design</a> - Coming Soon</div>
+               </li>
+               <li class="footer__nav_li"><a href="#">Student Stories</a></li>
+               <li class="footer__nav_li"><a href="#">Careers</a></li>
+            </ul>
+         </div>
+         <div class="xs:col-span-1">
+            <ul class="flex justify-end flex-wrap gap-5">
+               <li class="mb-5"><a href="#" class="social_a">
+                  <img src="img/social_insta.png" width="20" alt="" loading="lazy" decoding="async" style="background-size: cover; background-image: none;" class="-inset-9999 absolute m-auto sm:scale-150">
+               </a></li>
+               <li class="mb-5"><a href="#" class="social_a">
+                  <img src="img/social_x.png" width="24" alt="" loading="lazy" decoding="async" style="background-size: cover; background-image: none;" class="-inset-9999 absolute m-auto sm:scale-150">
+               </a></li>
+            </ul>
+            <div class="opacity-50 text-sm sm:text-base text-right">©2023 reduxbootcamp</div>
+         </div>
       </div>
-      <ul>
-         <li><a href="#">About Us</a></li>
-         <li><a href="#">Student Stories</a></li>
-         <li><a href="#">Courses</a>
-            <div class="opacity-50 text-sm">Product Design <br>
-            <a href="#" class="hover:underline">UI Design</a> - Coming Soon</div>
-         </li>
-         <li><a href="#">Careers</a></li>
-      </ul>
-      
-      <ul>
-         <li><a href="#">
-            <img src="img/social_insta.png" width="30" height="30" alt="" loading="lazy" decoding="async" style="background-size: cover; background-image: none;" class="-inset-9999 absolute">
-         </a></li>
-         <li><a href="#">
-            <img src="img/social_x.png" width="34" height="34" alt="" loading="lazy" decoding="async" style="background-size: cover; background-image: none;" class="-inset-9999 absolute">
-         </a></li>
-      </ul>
-      <div class="opacity-50 text-sm">©2023 reduxbootcamp</div>
-   </div></footer>
+   </footer>
    <script src="js/fslightbox.js"></script>
    <script src="js/script.js"></script>
 </body>

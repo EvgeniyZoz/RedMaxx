@@ -55,4 +55,46 @@ window.addEventListener('resize', function() {
     document.body.classList.remove('menuActive');
 });
 
-
+document.addEventListener('DOMContentLoaded', function() {
+    const navHeight = document.querySelector('.main__nav').offsetHeight;
+    const navLinks = document.querySelectorAll('.main__nav_a');
+    const navItems = document.querySelectorAll('.main__nav_li');
+    const sections = document.querySelectorAll('.mainNav');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navHeight;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        
+        sections.forEach((section, index) => {
+            console.log(section.getBoundingClientRect().top);
+            const sectionTop = section.getBoundingClientRect().top + scrollPosition - 100;
+            const sectionBottom = sectionTop + section.offsetHeight;
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                // Снимаем класс active со всех элементов меню
+                navItems.forEach(item => {
+                    item.classList.remove('active');
+                });
+                // Устанавливаем класс active для соответствующего элемента меню
+                navItems[index].classList.add('active');
+                
+            }
+        });
+    });
+});
