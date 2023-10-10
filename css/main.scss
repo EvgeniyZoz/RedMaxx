@@ -258,6 +258,7 @@ html, body{
 }
 .tarif__block .btn{
   display: block;
+  margin:0 -24px;
 }
 .main__nav_wrap{
   @apply relative sticky top-0 z-50;
