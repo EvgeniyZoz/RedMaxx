@@ -25,6 +25,9 @@ module.exports = {
       borderRadius:{
         '2.5xl':'20px'
       },
+      height:{
+        '22':'86px'
+      },
       colors:{ 
         'primary':'#161616',
         'primary2':'#242240',

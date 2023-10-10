@@ -251,7 +251,13 @@ html, body{
   }
 }
 .btn{
-  @apply sm:text-xl leading-6 font-medium bg-secondary text-white px-10 py-4 sm:py-5 inline-block hover:bg-accent hover:text-primary active:bg-primary active:text-white;
+  @apply sm:text-xl leading-6 font-medium bg-secondary text-white inline-block hover:bg-accent hover:text-primary active:bg-primary active:text-white text-center;
+}
+.btn--yellow{
+  @apply bg-accent hover:bg-secondary hover:text-white active:bg-primary active:text-white text-primary2;
+}
+.tarif__block .btn{
+  display: block;
 }
 .main__nav_wrap{
   @apply relative sticky top-0 z-50;
@@ -354,6 +360,71 @@ html, body{
   height: 0;
   display: block;
   position: relative;
+}
+.gallery_item--video{
+  &:before{
+    content:'';
+    width: 48px;
+    height: 48px;
+    background: url(../img/video_arrow.svg) no-repeat;
+    background-size: cover;;
+    position: absolute;
+    z-index: 30;
+    margin:auto;
+    inset:-9999px;
+    @media screen and (min-width:768px){
+      width: 86px;
+      height: 86px;
+    }
+  }
+}
+.accordion__wrap{
+  position: relative;
+  &:before{
+    content:'';
+    height: 108px;
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: 40;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 80%); 
+  }
+}
+.accordion-button{
+  margin-bottom: -1px;
+  @apply border-t border-b border-accent2 pb-4 pt-4 flex justify-between items-center w-full cursor-pointer sm:text-xl sm:leading-normal;
+}
+.accordion-body{
+  @apply border-b border-accent2 pt-4 pb-4 mb-4
+}
+.accordion--columns{
+  @apply xs:absolute inset-0 xs:-right-4 xs:pr-3 xs:pb-20;
+}
+.scrollable{
+  @apply scrollbar-thumb-accent3/70 scrollbar-track-accent3/30 scrollbar-w-2 scrollbar-thin scrollbar-track-rounded-xl;
+}
+.scrollable-xs{
+  @apply xs:scrollbar-thumb-accent3/70 xs:scrollbar-track-accent3/40 scrollbar-w-2 xs:scrollbar-thin scrollbar-track-rounded-xl;
+}
+.accordion-collapse {
+  max-height: 0;
+  overflow: hidden;
+}
+.accordion-item{
+  position: relative;
+  z-index: 30;
+}
+.accordion-item .accordion-collapse{
+  transition: max-height 0.3s ease-in-out;
+}
+.show .accordion-collapse{
+  max-height: 1000px; 
+}
+.tarif_row{
+  margin-bottom: -1px;
+  overflow: hidden;
+  @apply border-t border-b border-primary2/10 flex flex-col justify-center items-start;
 }
 /*------animation--------*/
 .header-menu-wrapper, .site-overlay, a, button, input, textarea,

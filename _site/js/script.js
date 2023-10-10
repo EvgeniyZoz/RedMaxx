@@ -2,6 +2,7 @@
 let body = document.querySelector('body');
 let menuBtn = document.querySelector('.menu-btn');
 let overlay = document.createElement('div');
+const accordions = document.querySelectorAll('.accordion');
     
 overlay.classList.add('site-overlay');
 body.appendChild(overlay);
@@ -25,9 +26,33 @@ body.addEventListener('click', function(event){
         // Видаляємо клас 'menuActive' з 'body'
         body.classList.remove('menuActive');
     }
+
+    
+    // Добавляем обработчик события 'click' для каждого аккордеона
+    accordions.forEach(accordion => {
+        
+        if (event.target.classList.contains('accordion-button') || event.target.closest('.accordion-button')) {
+            const accordionItem = event.target.closest('.accordion-item');
+    
+            if (accordionItem) {
+                const allAccordionItems = accordion.querySelectorAll('.accordion-item');
+        
+                allAccordionItems.forEach(item => {
+                    if (item !== accordionItem) {
+                        item.classList.remove('show', 'collapsing');
+                    }
+                });
+
+                // Переключаем класс 'show' у текущего элемента аккордеона
+                accordionItem.classList.toggle('show');
+            }
+        }
+    });
+
 });
 
 window.addEventListener('resize', function() {
     document.body.classList.remove('menuActive');
 });
+
 
