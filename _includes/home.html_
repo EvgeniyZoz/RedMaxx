@@ -4,6 +4,7 @@
 <head> 
    <!-- ======================================== -->
 <meta charset="UTF-8">
+<meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
@@ -22,28 +23,28 @@
       </div>
       <div class="header-menu-wrapper">
          <div class="text-center order-2 sm:border-l border-primary/30 sm:ml-5 sm:pl-10">
-            <a href="#" aria-label="Login" class="main__menu_a header_login"><span class="main__menu_span">Login</span></a>
+            <a href="#" class="main__menu_a header_login"><span class="main__menu_span">Login</span></a>
          </div>
          <nav class="sm:ml-auto order:1">
             <ul class="sm:flex">
                <li class="main__menu_li">
-                  <a href="#" class="main__menu_a main__menu_a--sub"  aria-label="Menu">
+                  <a href="#" class="main__menu_a main__menu_a--sub">
                      <span class="main__menu_span">Courses</span>
                      <span class="main__menu_arrow">
                         <img src="img/arrow.svg" width="13" height="9" alt="">
                      </span>
                   </a>
                   <ul class="main__menu_sub">
-                     <li><a href="#" class="main__menu_sub_a" aria-label="Careers">Courses 1</a></li>
-                     <li><a href="#" class="main__menu_sub_a" aria-label="Careers">Courses 2</a></li>
-                     <li><a href="#" class="main__menu_sub_a" aria-label="Careers">Courses 3</a></li>
-                     <li><a href="#" class="main__menu_sub_a" aria-label="Careers">Courses 4</a></li>
+                     <li><a href="#" class="main__menu_sub_a">Courses 1</a></li>
+                     <li><a href="#" class="main__menu_sub_a">Courses 2</a></li>
+                     <li><a href="#" class="main__menu_sub_a">Courses 3</a></li>
+                     <li><a href="#" class="main__menu_sub_a">Courses 4</a></li>
                   </ul>
                </li>
-               <li class="main__menu_li"><a href="#" class="main__menu_a" aria-label="About Us"><span class="main__menu_span">About Us</span></a></li>
-               <li class="main__menu_li"><a href="#" class="main__menu_a" aria-label="Student Stories"><span class="main__menu_span">Student Stories</span></a></li>
-               <li class="main__menu_li"><a href="#" class="main__menu_a" aria-label="Careers"><span class="main__menu_span">Careers</span></a></li>
-               <li class="main__menu_li"><a href="#" class="main__menu_a" aria-label="Contact"><span class="main__menu_span">Contact</span></a></li>
+               <li class="main__menu_li"><a href="#" class="main__menu_a"><span class="main__menu_span">About Us</span></a></li>
+               <li class="main__menu_li"><a href="#" class="main__menu_a"><span class="main__menu_span">Student Stories</span></a></li>
+               <li class="main__menu_li"><a href="#" class="main__menu_a"><span class="main__menu_span">Careers</span></a></li>
+               <li class="main__menu_li"><a href="#" class="main__menu_a"><span class="main__menu_span">Contact</span></a></li>
             </ul>
          </nav>
       </div>
@@ -75,7 +76,7 @@
                <li class="ul_li_checked mb-1.5 sm:mb-0">Flexible payment options</li>
                <li class="ul_li_checked mb-1.5 sm:mb-0">Autonomous or with a mentor</li>
             </ul>
-            <a href="#" class="btn mt-4 sm:mt-8 px-10 py-4 sm:py-5" aria-label="Apply Now">Apply Now</a>
+            <a href="#" class="btn mt-4 sm:mt-8 px-10 py-4 sm:py-5">Apply Now</a>
          </div>
       </div>
    </section><!--end main__block-->
@@ -84,11 +85,11 @@
          <nav class="main__nav scrollable">
             <ul class="flex">
                <li class="main__nav_li active"><a href="#main__nav1" class="main__nav_a">Introduction</a></li>
-               <li class="main__nav_li"><a href="#main__nav2" class="main__nav_a" aria-label="How it works"><span>How it works</span></a></li>
-               <li class="main__nav_li"><a href="#main__nav3" class="main__nav_a" aria-label="Mentorship"><span>Mentorship</span></a></li>
-               <li class="main__nav_li"><a href="#main__nav4" class="main__nav_a" aria-label="Skills you will gain"><span>Skills you will gain</span></a></li>
-               <li class="main__nav_li"><a href="#main__nav5" class="main__nav_a" aria-label="Curriculum"><span>Curriculum</span></a></li>
-               <li class="main__nav_li"><a href="#main__nav6" class="main__nav_a" aria-label="Apply now"><span>Apply now</span></a></li>
+               <li class="main__nav_li"><a href="#main__nav2" class="main__nav_a"><span>How it works</span></a></li>
+               <li class="main__nav_li"><a href="#main__nav3" class="main__nav_a"><span>Mentorship</span></a></li>
+               <li class="main__nav_li"><a href="#main__nav4" class="main__nav_a"><span>Skills you will gain</span></a></li>
+               <li class="main__nav_li"><a href="#main__nav5" class="main__nav_a"><span>Curriculum</span></a></li>
+               <li class="main__nav_li"><a href="#main__nav6" class="main__nav_a"><span>Apply now</span></a></li>
             </ul>
          </nav>
       </div>
@@ -287,28 +288,28 @@
          <div class="text-2xl font-medium mb-10">Strong portfolio upon bootcamp completion</div>
          <div class="xxs:grid grid-cols-2 gap-x-7">
             <div class="mb-10">
-               <a href="img/portfolio1.jpg" data-fslightbox="gallery" class="gallery_item mb-2.5" aria-label="Gallery1">
+               <a href="img/portfolio1.jpg" data-fslightbox="gallery" class="gallery_item mb-2.5">
                   <img src="img/portfolio_thumb1.jpg" alt="" loading="lazy" decoding="async" style="background-size: cover; background-image: none;" class="absolute inset-0 object-cover w-full h-full">
                </a>
                <div class="font-medium mb-0.5">Name Surename</div>
                Desktop
             </div>
             <div class="mb-10">
-               <a href="img/portfolio2.jpg" data-fslightbox="gallery" class="gallery_item mb-2.5" aria-label="Gallery2">
+               <a href="img/portfolio2.jpg" data-fslightbox="gallery" class="gallery_item mb-2.5">
                   <img src="img/portfolio_thumb2.jpg" alt="" loading="lazy" decoding="async" style="background-size: cover; background-image: none;" class="absolute inset-0 object-cover w-full h-full">
                </a>
                <div class="font-medium mb-0.5">Trixy Woodhouse</div>
                E-commerce website
             </div>
             <div class="mb-10">
-               <a href="img/portfolio3.jpg" data-fslightbox="gallery" class="gallery_item mb-2.5" aria-label="Gallery3">
+               <a href="img/portfolio3.jpg" data-fslightbox="gallery" class="gallery_item mb-2.5">
                   <img src="img/portfolio_thumb3.jpg" alt="" loading="lazy" decoding="async" style="background-size: cover; background-image: none;" class="absolute inset-0 object-cover w-full h-full">
                </a>
                <div class="font-medium mb-0.5">Lauren Borough</div>
                Mobile subscription management application
             </div>
             <div class="mb-10 mb-0.5">
-               <a href="img/portfolio4.jpg" data-fslightbox="gallery" class="gallery_item mb-2.5" aria-label="Gallery4">
+               <a href="img/portfolio4.jpg" data-fslightbox="gallery" class="gallery_item mb-2.5">
                   <img src="img/portfolio_thumb4.jpg" alt="" loading="lazy" decoding="async" style="background-size: cover; background-image: none;" class="absolute inset-0 object-cover w-full h-full">
                </a>
                <div class="font-medium mb-0.5">Katie Zesiger</div>
@@ -424,7 +425,7 @@
                </div>
             </div>
             <div class="flex justify-between mt-6 xs:absolute inset-0 top-auto z-50">
-               <a href="#" class="btn btn--yellow px-8 py-3.5 xs:ml-auto" aria-label="Request Syllabus">Request Syllabus</a>
+               <a href="#" class="btn btn--yellow px-8 py-3.5 xs:ml-auto">Request Syllabus</a>
             </div>
          </div>
       </div>
@@ -432,14 +433,14 @@
       <div class="text-2xl sm:text-2.5xl leading-normal font-medium mb-3">Student Reviews</div>
       <div class="xxs:grid grid-cols-2 gap-x-7">
          <div class="mb-10 xxs:mb-0">
-            <a href="https://youtu.be/FZSi1bK-BRM" data-fslightbox="gallery2" class="gallery_item gallery_item--video mb-4" aria-label="Video1">
+            <a href="https://youtu.be/FZSi1bK-BRM" data-fslightbox="gallery2" class="gallery_item gallery_item--video mb-4">
                <img src="img/video1.jpg" alt="" loading="lazy" decoding="async" style="background-size: cover; background-image: none;" class="absolute inset-0 object-cover w-full h-full z-10">
             </a>
             <div class="font-medium mb-0.5">Name Surename</div>
             Get personalised guidance from experienced design mentors who offer support and keep you motivated and informed about industry trends.
          </div>
          <div class="mb-10 xxs:mb-0">
-            <a href="https://youtu.be/FZSi1bK-BRM" data-fslightbox="gallery2" class="gallery_item gallery_item--video mb-4" aria-label="Video2">
+            <a href="https://youtu.be/FZSi1bK-BRM" data-fslightbox="gallery2" class="gallery_item gallery_item--video mb-4">
                <img src="img/video2.jpg" alt="" loading="lazy" decoding="async" style="background-size: cover; background-image: none;" class="absolute inset-0 object-cover w-full h-full z-10">
             </a>
             <div class="font-medium mb-0.5">Name Surename</div>
@@ -465,7 +466,7 @@
             <div class="tarif_row h-12">Portfolio</div>
             <div class="tarif_row h-12">Tarif</div>
          </div><!--end tarif__left-->
-         <a href="#" class="block px-6 pb-16 border border-t-4 relative border-accent sm:w-72 mb-10 sm:mb-20 group/tarif" aria-label="Tarif1">
+         <a href="#" class="block px-6 pb-16 border border-t-4 relative border-accent sm:w-72 mb-10 sm:mb-20 group/tarif">
             <div class="tarif_row h-22 text-2xl xs:text-3.5xl">
                Autonomous
             </div>
@@ -501,7 +502,7 @@
             </div>
             <div class="btn btn--yellow py-5 group-hover/tarif:bg-primary group-hover/tarif:text-white text-xl">Apply</div>
          </a>
-         <a href="#" class="block px-6 pb-16 border border-t-4 relative border-primary sm:max-w-lg w-full mb-10 sm:mb-20 group/tarif" aria-label="Tarif2">
+         <a href="#" class="block px-6 pb-16 border border-t-4 relative border-primary sm:max-w-lg w-full mb-10 sm:mb-20 group/tarif">
             <div class="tarif_row h-22 text-2xl xs:text-3.5xl">
                Pro
             </div>
@@ -698,25 +699,25 @@
       <div class="container pt-5 pb-12 xs:pb-0 xs:grid xs:grid-cols-3 xs:gap-x-8">
          <div class="xs:col-span-2">
             <div class="xs:flex mb-7 xs:gap-9">
-               <div><a href="mailto:Hello@reduxbootcamp.com" aria-label="mail">Hello@reduxbootcamp.com</a></div>
-               <div><a href="tel:+447361442688" aria-label="Phone">+44 7361 4426 88</a></div>
+               <div><a href="mailto:Hello@reduxbootcamp.com">Hello@reduxbootcamp.com</a></div>
+               <div><a href="tel:+447361442688">+44 7361 4426 88</a></div>
             </div>
             <ul class="footer__nav mb-12">
-               <li class="footer__nav_li"><a href="#" aria-label="About Us">About Us</a></li>
-               <li class="footer__nav_li"><a href="#" aria-label="Courses">Courses</a>
+               <li class="footer__nav_li"><a href="#">About Us</a></li>
+               <li class="footer__nav_li"><a href="#">Courses</a>
                   <div class="opacity-50 text-sm sm:text-base">Product Design <br>
-                  <a href="#" class="hover:underline" aria-label="UI Design">UI Design</a> - Coming Soon</div>
+                  <a href="#" class="hover:underline">UI Design</a> - Coming Soon</div>
                </li>
-               <li class="footer__nav_li"><a href="#" aria-label="Student Stories">Student Stories</a></li>
-               <li class="footer__nav_li"><a href="#" aria-label="Careers">Careers</a></li>
+               <li class="footer__nav_li"><a href="#">Student Stories</a></li>
+               <li class="footer__nav_li"><a href="#">Careers</a></li>
             </ul>
          </div>
          <div class="xs:col-span-1">
             <ul class="flex justify-end flex-wrap gap-5">
-               <li class="mb-5"><a href="#"  aria-label="Social instagram" class="social_a">
+               <li class="mb-5"><a href="#" class="social_a">
                   <img src="img/social_insta.png" width="20" alt="" loading="lazy" decoding="async" style="background-size: cover; background-image: none;" class="-inset-9999 absolute m-auto sm:scale-150">
                </a></li>
-               <li class="mb-5"><a href="#" class="social_a" aria-label="Social X">
+               <li class="mb-5"><a href="#" class="social_a">
                   <img src="img/social_x.png" width="24" alt="" loading="lazy" decoding="async" style="background-size: cover; background-image: none;" class="-inset-9999 absolute m-auto sm:scale-150">
                </a></li>
             </ul>
