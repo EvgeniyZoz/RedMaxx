@@ -259,7 +259,11 @@ html, body {
 
 .tarif__block .btn {
   display: block;
-  margin: 0 -24px;
+  line-height: 24px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .main__nav_wrap {
@@ -413,7 +417,7 @@ html, body {
 
 .accordion-button {
   margin-bottom: -1px;
-  @apply border-t border-b border-accent2 pb-4 pt-4 flex justify-between items-center w-full cursor-pointer sm:text-xl sm:leading-normal;
+  @apply border-t text-left border-b border-accent2 pb-4 pt-4 flex justify-between items-center w-full cursor-pointer sm:text-xl sm:leading-normal;
 }
 
 .accordion-body {
@@ -425,11 +429,11 @@ html, body {
 }
 
 .scrollable {
-  @apply scrollbar-thumb-accent3/70 scrollbar-track-accent3/30 scrollbar-w-2 scrollbar-thin scrollbar-track-rounded-xl;
+  @apply scrollbar-thumb-accent3/70 scrollbar-track-accent3/30 scrollbar-w-1 scrollbar-thin scrollbar-track-rounded-xl;
 }
 
 .scrollable-xs {
-  @apply xs:scrollbar-thumb-accent3/70 xs:scrollbar-track-accent3/40 scrollbar-w-2 xs:scrollbar-thin scrollbar-track-rounded-xl;
+  @apply xs:scrollbar-thumb-accent3/70 xs:scrollbar-track-accent3/40 scrollbar-w-1 xs:scrollbar-thin scrollbar-track-rounded-xl;
 }
 
 .accordion-collapse {

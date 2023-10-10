@@ -25,12 +25,13 @@ body.addEventListener('click', function(event){
     if (event.target.classList.contains('site-overlay')) {
         // Видаляємо клас 'menuActive' з 'body'
         body.classList.remove('menuActive');
-    }
+    }    
 
-    
-    // Добавляем обработчик события 'click' для каждого аккордеона
-    accordions.forEach(accordion => {
-        
+});
+
+// Добавляем обработчик события 'click' для каждого аккордеона
+accordions.forEach(accordion => {
+    accordion.addEventListener('click', (event) => {
         if (event.target.classList.contains('accordion-button') || event.target.closest('.accordion-button')) {
             const accordionItem = event.target.closest('.accordion-item');
     
@@ -48,7 +49,6 @@ body.addEventListener('click', function(event){
             }
         }
     });
-
 });
 
 window.addEventListener('resize', function() {
