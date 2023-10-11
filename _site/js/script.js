@@ -77,24 +77,22 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    window.addEventListener('scroll', function() {
-        const scrollPosition = window.scrollY;
-        
-        sections.forEach((section, index) => {
-            console.log(section.getBoundingClientRect().top);
-            const sectionTop = section.getBoundingClientRect().top + scrollPosition - 100;
-            const sectionBottom = sectionTop + section.offsetHeight;
-            
-            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                // Снимаем класс active со всех элементов меню
-                navItems.forEach(item => {
-                    item.classList.remove('active');
+
+    // active class of menu items onscroll
+    window.addEventListener('scroll', () => {
+        let scrollDistance = window.scrollY;
+
+        document.querySelectorAll('.mainNav').forEach((el, i) => {
+            if (el.offsetTop - document.querySelector('.main__nav').clientHeight <= scrollDistance) {
+                document.querySelectorAll('.main__nav_li').forEach((el) => {
+                    if (el.classList.contains('active')) {
+                        el.classList.remove('active');
+                    }
                 });
-                // Устанавливаем класс active для соответствующего элемента меню
-                navItems[index].classList.add('active');
-                
+
+                document.querySelectorAll('.main__nav_li')[i].classList.add('active');
             }
         });
     });
+    
 });

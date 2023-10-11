@@ -28,6 +28,9 @@ module.exports = {
       height:{
         '22':'86px'
       },
+      maxWidth:{
+        '3.5xl':'840px'
+      },
       colors:{ 
         'primary':'#161616',
         'primary2':'#242240',

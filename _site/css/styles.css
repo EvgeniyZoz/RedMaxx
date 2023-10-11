@@ -844,6 +844,10 @@ video {
   width: 6rem;
 }
 
+.w-32 {
+  width: 8rem;
+}
+
 .w-48 {
   width: 12rem;
 }
@@ -854,6 +858,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.max-w-3\.5xl {
+  max-width: 840px;
 }
 
 .max-w-3xl {
@@ -1090,6 +1098,11 @@ video {
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .py-2 {
@@ -1569,6 +1582,10 @@ html, body {
   top: 0;
   z-index: 100;
   height: 96px;
+}
+
+.header-bordered {
+  border-bottom: 1px solid #C6C1C9;
 }
 
 .form-control {
@@ -2392,7 +2409,6 @@ html, body {
 
 .enrol__block {
   border-bottom: 1px solid #C6C1C9;
-  border-top: 1px solid #C6C1C9;
 }
 
 .enrol__block_left {
@@ -3209,6 +3225,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     margin-left: auto;
   }
 
+  .xs\:mr-12 {
+    margin-right: 3rem;
+  }
+
   .xs\:mr-20 {
     margin-right: 5rem;
   }
@@ -3266,6 +3286,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .xs\:pr-3 {
     padding-right: 0.75rem;
+  }
+
+  .xs\:pt-10 {
+    padding-top: 2.5rem;
   }
 
   .xs\:text-center {
@@ -3522,6 +3546,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .sm\:py-1 {
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
+  }
+
+  .sm\:py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
   .sm\:py-5 {
