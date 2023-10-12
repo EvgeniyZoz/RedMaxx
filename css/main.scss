@@ -89,7 +89,7 @@ html, body{
   z-index: -1;
 }
 .header-menu-wrapper{
-  @apply py-20 text-center text-xl sm:py-0 sm:flex flex-grow items-center w-72 fixed sm:static -right-72 top-0  bottom-0;
+  @apply py-20 text-center text-xl sm:text-base sm:py-0 sm:flex flex-grow items-center w-72 fixed sm:static -right-72 top-0  bottom-0;
 }
 .header{
   background: #FFF;
@@ -105,10 +105,40 @@ html, body{
 }
 .form-control{
   width: 100%;
+  background: #FFF;
   border:1px solid #161616;
   padding:14px 10px;
   line-height: 20px;
   font-family: 'Roboto';
+}
+.select{
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  &:after{
+    content:'';
+    width: 13px;
+    height: 9px;
+    background: url(../img/arrow.svg) no-repeat;
+    background-size: cover;
+    margin-right: 15px;
+    right:0;
+    top:50%;
+    margin-top: -4px;
+    z-index: 100;
+    position: absolute;
+  }
+  select{
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    background: #FFF;
+    padding:12px 20px 14px 10px;
+    border:1px solid #161616;
+    z-index: 90;
+  }
 }
 .menuActive {
   overflow: hidden;
@@ -261,18 +291,18 @@ html, body{
   }
 }
 .btn{
-  @apply sm:text-xl leading-6 font-medium bg-secondary text-white inline-block hover:bg-accent hover:text-primary active:bg-primary active:text-white text-center;
+  @apply sm:text-xl leading-6 font-medium bg-secondary text-white inline-block hover:bg-primary active:bg-primary active:text-white text-center;
 }
 .btn--yellow{
-  @apply bg-accent hover:bg-secondary hover:text-white active:bg-primary active:text-white text-primary2;
+  @apply bg-accent hover:bg-primary hover:text-white active:bg-primary active:text-white text-primary2;
 }
 .tarif__block .btn{
   display: block;
   line-height: 24px;
   position: absolute;
   bottom:0;
-  left:0;
-  right:0
+  left:-1px;
+  right:-1px
 }
 .main__nav_wrap{
   @apply relative sticky top-0 z-50;
@@ -472,6 +502,32 @@ html, body{
   width: 100%;
   max-width: 405px;
   flex-shrink: 0;
+}
+.radio{
+  @apply relative;
+}
+.radio_ico{
+  @apply relative w-8 h-8 rounded-full border border-primary bg-white before:w-6 before:h-6 before:rounded-full before:bg-primary before:opacity-0 before:absolute before:m-auto before:-inset-9999;
+}
+.radio_caption{
+  width: 100%;
+}
+.radio_tarif_btn{
+  @apply text-xs px-2.5 leading-5 py-1.5 bg-accent2 font-medium;
+}
+.radio_tarif_label{
+  @apply block absolute inset-0 cursor-pointer z-40 w-full h-full;
+}
+.radio_tarif_price{
+  @apply font-medium text-3.5xl text-primary4 xs:text-4.5xl leading-10;
+}
+.peer\/radio1:checked ~ .radio_caption{
+  .radio_tarif_btn{
+    @apply bg-secondary text-white;
+  }
+  .radio_tarif_price{
+    @apply text-primary;
+  }
 }
 /*------animation--------*/
 .header-menu-wrapper, .site-overlay, a, button, input, textarea,

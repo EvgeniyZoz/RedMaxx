@@ -29,7 +29,8 @@ module.exports = {
         '22':'86px'
       },
       maxWidth:{
-        '3.5xl':'840px'
+        '3.5xl':'840px',
+        'sm_2':'404px'
       },
       colors:{ 
         'primary':'#161616',
