@@ -56,11 +56,18 @@ window.addEventListener('resize', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const navHeight = document.querySelector('.main__nav').offsetHeight;
-    const navLinks = document.querySelectorAll('.main__nav_a');
+    const navElement = document.querySelector('.main__nav');
+    let navHeight;
+    const navLinks = document.querySelectorAll('.main__nav_a, .link');
     const navItems = document.querySelectorAll('.main__nav_li');
     const sections = document.querySelectorAll('.mainNav');
     
+    if (navElement) {
+        navHeight = navElement.offsetHeight;
+    } else {
+        navHeight = 0;
+    }
+
     navLinks.forEach(link => {
         link.addEventListener('click', function(event) {
             event.preventDefault();

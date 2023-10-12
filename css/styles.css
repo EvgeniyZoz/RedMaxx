@@ -114,6 +114,22 @@ html, body {
   font-family: "Roboto";
 }
 
+.form-control:hover, .select:hover select {
+  outline: 4px solid #F5F2E8;
+}
+
+.form-control:focus, .select select:focus {
+  outline: 4px solid #FFD166;
+}
+
+.form-control:disabled, .select select:disabled {
+  background: #F3F3F3;
+}
+
+.form-control:invalid, .select select:invalid {
+  border-color: #D00000;
+}
+
 .select {
   position: relative;
   z-index: 10;
@@ -296,8 +312,20 @@ html, body {
   @apply sm:text-xl leading-6 font-medium bg-secondary text-white inline-block hover:bg-primary active:bg-primary active:text-white text-center;
 }
 
+.btn:disabled {
+  @apply bg-secondary;
+}
+
 .btn--yellow {
   @apply bg-accent hover:bg-primary hover:text-white active:bg-primary active:text-white text-primary2;
+}
+
+.btn--yellow:disabled {
+  @apply bg-accent text-primary;
+}
+
+.btn:focus {
+  outline: 4px solid #FFD166;
 }
 
 .tarif__block .btn {
@@ -416,7 +444,6 @@ html, body {
 
 .main__block {
   @apply bg-accent2 overflow-hidden sm:flex justify-center flex-col;
-  min-height: calc(100vh - 96px);
 }
 
 .header_login {
@@ -468,7 +495,7 @@ html, body {
 }
 
 .accordion-body {
-  @apply border-b border-accent2 pt-4 pb-4 mb-4;
+  @apply border-b border-accent2 pt-4 pb-4;
 }
 
 .accordion--columns {
@@ -507,7 +534,6 @@ html, body {
 
 .tarif_row {
   margin-bottom: -1px;
-  overflow: hidden;
   @apply border-t border-b border-primary2/10 flex flex-col justify-center items-start;
 }
 
@@ -547,6 +573,34 @@ html, body {
   @apply relative;
 }
 
+.radio:hover .radio_ico:before {
+  background: #F3F3F3;
+  opacity: 1;
+}
+
+.radio:hover input:checked ~ .radio_ico:before,
+.radio input:checked ~ .radio_ico:before {
+  background: #161616;
+  opacity: 1;
+}
+
+.radio input:focus ~ .radio_ico {
+  outline: 4px solid #FFD166;
+}
+
+.radio input:disabled ~ .radio_ico,
+.btn:disabled {
+  opacity: 0.5;
+}
+
+.radio input:disabled:hover ~ .radio_ico:before {
+  background: #FFF;
+}
+
+.radio:hover input:disabled:checked:hover ~ .radio_ico:before {
+  background: #161616;
+}
+
 .radio_ico {
   @apply relative w-8 h-8 rounded-full border border-primary bg-white before:w-6 before:h-6 before:rounded-full before:bg-primary before:opacity-0 before:absolute before:m-auto before:-inset-9999;
 }
@@ -567,10 +621,10 @@ html, body {
   @apply font-medium text-3.5xl text-primary4 xs:text-4.5xl leading-10;
 }
 
-.peer\/radio1:checked ~ .radio_caption .radio_tarif_btn {
+.radio input:checked ~ .radio_caption .radio_tarif_btn {
   @apply bg-secondary text-white;
 }
-.peer\/radio1:checked ~ .radio_caption .radio_tarif_price {
+.radio input:checked ~ .radio_caption .radio_tarif_price {
   @apply text-primary;
 }
 
