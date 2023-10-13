@@ -522,19 +522,25 @@ html, body{
   max-width: 405px;
   flex-shrink: 0;
 }
+.tarif_row--radio{
+  margin-left:-24px;
+  margin-right:-24px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
 .radio{
   @apply relative;
 }
 .radio:hover{
   .radio_ico:before{
     background: #F3F3F3;
-    opacity: 1;
+    display: block;
   }
 }
 .radio:hover input:checked ~ .radio_ico:before,
 .radio input:checked ~ .radio_ico:before{
   background: #161616;
-  opacity: 1;;
+  display: block;
 }
 .radio input:focus ~ .radio_ico{
   outline: 4px solid #FFD166;
@@ -550,7 +556,7 @@ html, body{
   background: #161616;
 }
 .radio_ico{
-  @apply relative w-8 h-8 rounded-full border border-primary bg-white before:w-6 before:h-6 before:rounded-full before:bg-primary before:opacity-0 before:absolute before:m-auto before:-inset-9999;
+  @apply relative w-8 h-8 rounded-full border border-primary bg-white before:w-6 before:h-6 before:rounded-full before:bg-primary before:hidden before:absolute before:m-auto before:-inset-9999;
 }
 .radio_caption{
   width: 100%;
@@ -574,7 +580,8 @@ html, body{
 }
 /*------animation--------*/
 .header-menu-wrapper, .site-overlay, a, button, input, textarea,
-.menu-btn:after, .menu-btn:before, .main__menu_arrow{
+.menu-btn:after, .menu-btn:before, .main__menu_arrow, .radio, .radio_ico,
+.radio_ico:before{
   transition: all 0.3s;
 }
 /*------media-------*/

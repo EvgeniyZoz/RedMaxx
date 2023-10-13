@@ -32,6 +32,9 @@ module.exports = {
         '3.5xl':'840px',
         'sm_2':'404px'
       },
+      padding:{
+        '4.5':'18px'
+      },
       colors:{ 
         'primary':'#161616',
         'primary2':'#242240',

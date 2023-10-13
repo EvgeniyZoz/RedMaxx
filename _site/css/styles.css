@@ -1256,14 +1256,6 @@ video {
   padding-top: 1.25rem;
 }
 
-.pr-5 {
-  padding-right: 1.25rem;
-}
-
-.pr-7 {
-  padding-right: 1.75rem;
-}
-
 .text-left {
   text-align: left;
 }
@@ -2545,19 +2537,26 @@ html, body {
   flex-shrink: 0;
 }
 
+.tarif_row--radio {
+  margin-left: -24px;
+  margin-right: -24px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
 .radio {
   position: relative;
 }
 
 .radio:hover .radio_ico:before {
   background: #F3F3F3;
-  opacity: 1;
+  display: block;
 }
 
 .radio:hover input:checked ~ .radio_ico:before,
 .radio input:checked ~ .radio_ico:before {
   background: #161616;
-  opacity: 1;
+  display: block;
 }
 
 .radio input:focus ~ .radio_ico {
@@ -2593,13 +2592,13 @@ html, body {
   position: absolute;
   inset: -9999px;
   margin: auto;
+  display: none;
   height: 1.5rem;
   width: 1.5rem;
   border-radius: 9999px;
+  content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(22 22 22 / var(--tw-bg-opacity));
-  content: var(--tw-content);
-  opacity: 0;
 }
 
 .radio_caption {
@@ -2657,7 +2656,8 @@ html, body {
 /*------animation--------*/
 
 .header-menu-wrapper, .site-overlay, a, button, input, textarea,
-.menu-btn:after, .menu-btn:before, .main__menu_arrow {
+.menu-btn:after, .menu-btn:before, .main__menu_arrow, .radio, .radio_ico,
+.radio_ico:before {
   transition: all 0.3s;
 }
 
@@ -3306,11 +3306,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   background-color: rgb(22 22 22 / var(--tw-bg-opacity));
 }
 
-.before\:opacity-0::before {
-  content: var(--tw-content);
-  opacity: 0;
-}
-
 .group\/item:hover .group-hover\/item\:bg-accent2 {
   --tw-bg-opacity: 1;
   background-color: rgb(245 242 232 / var(--tw-bg-opacity));
@@ -3566,12 +3561,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     padding-right: 0.75rem;
   }
 
-  .xs\:pt-10 {
-    padding-top: 2.5rem;
-  }
-
   .xs\:pr-5 {
     padding-right: 1.25rem;
+  }
+
+  .xs\:pt-10 {
+    padding-top: 2.5rem;
   }
 
   .xs\:text-center {
@@ -3845,9 +3840,14 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     padding-bottom: 6rem;
   }
 
-  .sm\:py-5 {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+  .sm\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .sm\:py-4\.5 {
+    padding-top: 18px;
+    padding-bottom: 18px;
   }
 
   .sm\:py-9 {
