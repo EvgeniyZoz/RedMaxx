@@ -325,6 +325,9 @@ html, body{
   left:-1px;
   right:-1px
 }
+.accordion--faq{
+  max-width: 1060px
+}
 .main__nav_wrap{
   @apply relative sticky top-0 z-50;
   
@@ -464,7 +467,7 @@ html, body{
   @apply border-t text-left border-b border-accent2 pb-4 pt-4 flex justify-between items-center w-full cursor-pointer sm:text-xl sm:leading-normal;
 }
 .accordion-body{
-  @apply border-b border-accent2 pt-4 pb-4
+  @apply border-b border-accent2 pt-4 pb-4;
 }
 .accordion--columns{
   @apply xs:absolute inset-0 xs:-right-4 xs:pr-3 xs:pb-20;
@@ -546,6 +549,7 @@ html, body{
     display: block;
   }
 }
+.radio input:checked ~ .radio_ico,
 .radio:hover input:checked ~ .radio_ico,
 .radio:focus input:checked ~ .radio_ico{
   border-width:2px;
@@ -619,10 +623,9 @@ html, body{
 }
 /*------media-------*/
 @media screen and (min-width:480px){
-  
-}
-@media screen and (min-width:768px){
-  
+  .accordion--faq .accordion-body{
+    padding-right: 10%;
+  }
 }
 @media screen and (min-width:992px){
   .main__menu_li{

@@ -1977,6 +1977,10 @@ html, body {
   right: -1px;
 }
 
+.accordion--faq {
+  max-width: 1060px;
+}
+
 .main__nav_wrap {
   position: relative;
   position: sticky;
@@ -2561,6 +2565,7 @@ html, body {
   display: block;
 }
 
+.radio input:checked ~ .radio_ico,
 .radio:hover input:checked ~ .radio_ico,
 .radio:focus input:checked ~ .radio_ico {
   border-width: 2px;
@@ -2707,6 +2712,12 @@ html, body {
 }
 
 /*------media-------*/
+
+@media screen and (min-width: 480px) {
+  .accordion--faq .accordion-body {
+    padding-right: 10%;
+  }
+}
 
 @media screen and (min-width: 992px) {
   .main__menu_li {

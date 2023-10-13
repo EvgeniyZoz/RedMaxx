@@ -7,8 +7,8 @@ module.exports = {
   darkNode: 'class', 
   theme: {
     extend: {
-      fontFamily: { 
-         
+      maxWidth: {
+        'faq':'980px',
       },
       fontSize:{
         'inherit':['16px', '1.5'],
