@@ -522,20 +522,33 @@ html, body{
   max-width: 405px;
   flex-shrink: 0;
 }
-.tarif_row--radio{
-  margin-left:-24px;
-  margin-right:-24px;
-  padding-left: 24px;
-  padding-right: 24px;
+.tarif_row.radio{
+  position: relative;
+}
+.tarif_radio_bg{
+  z-index: 0;
+  position: absolute;
+  left:-24px;
+  right:-24px;
+  top:0;
+  bottom:0;
+  background: red;
+}
+.tarif_row.radio{
+  
 }
 .radio{
   @apply relative;
 }
 .radio:hover{
   .radio_ico:before{
-    background: #F3F3F3;
+    @apply bg-accent2;
     display: block;
   }
+}
+.radio:hover input:checked ~ .radio_ico,
+.radio:focus input:checked ~ .radio_ico{
+  border-width:2px;
 }
 .radio:hover input:checked ~ .radio_ico:before,
 .radio input:checked ~ .radio_ico:before{
@@ -556,13 +569,16 @@ html, body{
   background: #161616;
 }
 .radio_ico{
-  @apply relative w-8 h-8 rounded-full border border-primary bg-white before:w-6 before:h-6 before:rounded-full before:bg-primary before:hidden before:absolute before:m-auto before:-inset-9999;
+  @apply relative z-10 w-8 h-8 rounded-full border border-primary bg-white before:w-6 before:h-6 before:rounded-full before:bg-primary before:hidden before:absolute before:m-auto before:-inset-9999;
 }
 .radio_caption{
   width: 100%;
 }
 .radio_tarif_btn{
   @apply text-xs px-2.5 leading-5 py-1.5 bg-accent2 font-medium;
+}
+.radio_tarif_btn--red{
+  @apply bg-secondary text-white;
 }
 .radio_tarif_label{
   @apply block absolute inset-0 cursor-pointer z-40 w-full h-full;
@@ -572,10 +588,27 @@ html, body{
 }
 .radio input:checked ~ .radio_caption{
   .radio_tarif_btn{
+    @apply bg-primary text-white;
+  }
+  .radio_tarif_btn--red{
     @apply bg-secondary text-white;
   }
   .radio_tarif_price{
     @apply text-primary;
+  }
+  & > *{
+    position: relative;
+    z-index: 100;
+  }
+  &:before{
+    z-index: 0;
+    content:'';
+    position: absolute;
+    left:-24px;
+    right:-24px;
+    top:0;
+    bottom:0;
+    @apply bg-accent2;
   }
 }
 /*------animation--------*/

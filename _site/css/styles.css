@@ -2537,11 +2537,18 @@ html, body {
   flex-shrink: 0;
 }
 
-.tarif_row--radio {
-  margin-left: -24px;
-  margin-right: -24px;
-  padding-left: 24px;
-  padding-right: 24px;
+.tarif_row.radio {
+  position: relative;
+}
+
+.tarif_radio_bg {
+  z-index: 0;
+  position: absolute;
+  left: -24px;
+  right: -24px;
+  top: 0;
+  bottom: 0;
+  background: red;
 }
 
 .radio {
@@ -2549,8 +2556,14 @@ html, body {
 }
 
 .radio:hover .radio_ico:before {
-  background: #F3F3F3;
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 242 232 / var(--tw-bg-opacity));
   display: block;
+}
+
+.radio:hover input:checked ~ .radio_ico,
+.radio:focus input:checked ~ .radio_ico {
+  border-width: 2px;
 }
 
 .radio:hover input:checked ~ .radio_ico:before,
@@ -2578,6 +2591,7 @@ html, body {
 
 .radio_ico {
   position: relative;
+  z-index: 10;
   height: 2rem;
   width: 2rem;
   border-radius: 9999px;
@@ -2617,6 +2631,13 @@ html, body {
   line-height: 1.25rem;
 }
 
+.radio_tarif_btn--red {
+  --tw-bg-opacity: 1;
+  background-color: rgb(208 0 0 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .radio_tarif_label {
   position: absolute;
   inset: 0px;
@@ -2643,6 +2664,13 @@ html, body {
 
 .radio input:checked ~ .radio_caption .radio_tarif_btn {
   --tw-bg-opacity: 1;
+  background-color: rgb(22 22 22 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.radio input:checked ~ .radio_caption .radio_tarif_btn--red {
+  --tw-bg-opacity: 1;
   background-color: rgb(208 0 0 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -2651,6 +2679,23 @@ html, body {
 .radio input:checked ~ .radio_caption .radio_tarif_price {
   --tw-text-opacity: 1;
   color: rgb(22 22 22 / var(--tw-text-opacity));
+}
+
+.radio input:checked ~ .radio_caption > * {
+  position: relative;
+  z-index: 100;
+}
+
+.radio input:checked ~ .radio_caption:before {
+  z-index: 0;
+  content: "";
+  position: absolute;
+  left: -24px;
+  right: -24px;
+  top: 0;
+  bottom: 0;
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 242 232 / var(--tw-bg-opacity));
 }
 
 /*------animation--------*/
